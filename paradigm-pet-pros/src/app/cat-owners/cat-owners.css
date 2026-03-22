@@ -1,0 +1,21 @@
+.pet-page-layout {
+  display: fixed;
+  gap: 40px; 
+  align-items: flex-start;
+}
+
+.text-content {
+  flex: 2;
+}
+
+.side-image {
+  flex: 1; 
+  top: 20px;
+}
+
+.side-image img {
+  width: auto;
+  border-radius: 8px;
+  border: 1px solid #BDBDBD;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

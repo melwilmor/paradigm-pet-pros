@@ -1,0 +1,63 @@
+<div class="form-container" style="padding: 40px; max-width: 600px; margin: auto;">
+  <h2 style="color: #003B6D;">Request a Virtual Consultation</h2>
+  <p style="color: #676767;">Please fill out the form below and a "Pexpert" will contact you within 48 hours.</p>
+
+  <form style="display: flex; flex-direction: column; gap: 15px;">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" required style="padding: 10px; border: 1px solid #BDBDBD;">
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" required style="padding: 10px; border: 1px solid #BDBDBD;">
+
+    <div class="form-group">
+        <label for="phone">Phone Number & Time Zone</label>
+        <div class="input-row">
+            <input type="tel" id="phone" placeholder="(555) 555 - 5555" required class="phone-input">
+
+            <select id="timezone" class="timezone-select">
+                <option value="PST">PST</option>
+                <option value="MST">MST</option>
+                <option value="CST">CST</option>
+                <option value="EST">EST</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+    </div>
+
+    <label for="pet-type">Pet Category</label>
+    <select id="pet-type" style="padding: 10px;">
+      <option value="dog">Dog</option>
+      <option value="cat">Cat</option>
+      <option value="small-animal" selected>Small Animal (Hamster, Chinchilla, etc.)</option>
+    </select>
+
+    <div class="form-group">
+        <label for="pet-details">Pet's Name & Age</label>
+        <div class="input-row">
+            <input type="text" id="pet-name" placeholder="Pet's Name" required class="name-input">
+
+            <input type="number" id="pet-age" placeholder="Age" min="0" required class="age-input">
+
+            <select id="age-unit" class="unit-select">
+                <option value="years">Years</option>
+                <option value="months">Months</option>
+                <option value="weeks">Weeks</option>
+            </select>
+        </div>
+    </div>
+
+    <label for="service">Requested Service</label>
+    <select id="service" style="padding: 10px;">
+      <option value="video">Video Consultation</option>
+      <option value="phone">Phone Consultation</option>
+      <option value="e-mail">E-Mail</option>
+    </select>
+
+    <label for="message">How can we help?</label>
+    <textarea id="message" rows="4" style="padding: 10px; border: 1px solid #BDBDBD;"></textarea>
+
+    <button type="submit" style="background-color: #003B6D; color: white; padding: 15px; border: none; cursor: pointer; font-weight: bold;">
+      Submit Request
+    </button>
+  </form>
+</div>

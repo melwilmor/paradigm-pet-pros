@@ -1,0 +1,96 @@
+<header style="background-color: white; padding: 20px; text-align: center;">
+  <a routerLink="/home">
+    <img src="new-logo.png" alt="Paradigm Pet Professionals Logo" style="height: 80px;">
+  </a>
+</header>
+
+<nav>
+  <ul class="primary-nav">
+    <li><a routerLink="/home" routerLinkActive="active-link">Home</a></li>
+
+    <li class="dropdown">
+      <a routerLink="/dog-owners" routerLinkActive="active-link">Dogs</a>
+      <ul class="dropdown-content">
+        <li><a routerLink="/dog-owners" fragment="diet">Diet & Exercise</a></li>
+        <li><a routerLink="/dog-owners" fragment="grooming">Grooming & Handling</a></li>
+        <li><a routerLink="/dog-owners" fragment="vaccines">Vaccinations & Medication</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a routerLink="/cat-owners" routerLinkActive="active-link">Cats</a>
+      <ul class="dropdown-content">
+        <li><a routerLink="/cat-owners" fragment="0wks">0 - 4 Weeks</a></li>
+        <li><a routerLink="/cat-owners" fragment="4wks">4 Weeks - 1 Year</a></li>
+        <li><a routerLink="/cat-owners" fragment="1yr">1 - 7 Years</a></li>
+        <li><a routerLink="/cat-owners" fragment="7yr">7+ Years</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a routerLink="/small-animals" routerLinkActive="active-link">Small Animals</a>
+      <ul class="dropdown-content">
+        <li><a routerLink="/small-animals" fragment="gp">Guinea Pigs</a></li>
+        <li><a routerLink="/small-animals" fragment="ch">Chinchillas</a></li>
+        <li><a routerLink="/small-animals" fragment="hm">Hamsters</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a routerLink="/consult" routerLinkActive="active-link">Contact Us</a>
+      <ul class="dropdown-content">
+        <li><a routerLink="/about-us">About Us</a></li>
+        <li><a routerLink="/consult">Contact Form</a></li>
+        <li><a routerLink="/testimonials">Testimonials</a></li>
+        <li><a routerLink="/patient-portal">Patient Portal</a></li>
+      </ul>
+    </li>
+      <div class="search-container">
+    <input type="text" placeholder="Search" class="search-input">
+    <button type="submit" class="search-button">
+      <span class="search-icon">🐾</span>
+    </button>
+  </div>
+  </ul>
+  
+</nav>
+
+
+<nav aria-label="Breadcrumb" class="breadcrumb-container">
+  <ol class="breadcrumb-list">
+    <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+    <li class="breadcrumb-item active" *ngIf="currentPath !== 'Home'">
+      {{ currentPath | titlecase }}
+    </li>
+  </ol>
+</nav>
+
+<main class="context-wrapper">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="Logo.png" alt="Paradigm Pet Professionals Logo" class="footer-logo">
+      <nav class="footer-nav">
+        <a routerLink="/contact/consult">Contact</a>
+        <a href="#">RSS</a>
+        <a href="#">Privacy & Terms</a>
+        <a href="#">Accessibility</a>
+        <a href="#">Do Not Sell My Information</a>
+      </nav>
+    </div>
+
+    <div class="footer-right">
+      <div class="social-icons">
+        <a href="https://www.linkedin.com" target="_blank" class="social-link">LinkedIn</a>
+        <a href="https://www.x.com" target="_blank" class="social-link">X</a>
+        <a href="https://www.instagram.com" target="_blank" class="social-link">Instagram</a>
+        <a href="https://www.facebook.com" target="_blank" class="social-link">Facebook</a>
+        <a href="https://www.tiktok.com" target="_blank" class="social-link">TikTok</a>
+      </div>
+      <p class="copyright">©2026 Paradigm Pet Professionals. All Rights Reserved</p>
+    </div>
+  </div>
+</footer>
